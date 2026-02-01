@@ -1,0 +1,70 @@
+$carbon--font-face-name: "IBM Plex Sans";
+$carbon--font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+$feature-flags: (
+  enable-css-custom-properties: true,
+);
+@use '@carbon/colors';
+
+.container {
+    background-color: #f4f4f4;
+    min-height: 100vh;
+}
+
+.main-content {
+    padding-top: 5rem;
+}
+
+.search-section {
+    margin-bottom: 2rem;
+    max-width: 400px;
+}
+
+.top-cities-section {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.current-weather {
+    background: white;
+    padding: 2rem;
+    border-top: 4px solid #0f62fe;
+    margin-bottom: 2rem;
+    
+    .temp-main {
+        font-size: 4rem;
+        font-weight: 600;
+        margin: 1rem 0;
+    }
+}
+
+.forecast-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto; 
+    padding-bottom: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .forecast-card {
+        flex: 1 1 140px;
+        min-width: 200px;
+        text-align: center;
+        background: white;
+        padding: 1.5rem 1rem;
+        border: 1px solid lightgray;
+    }
+}
+@media (max-width: 600px) {
+    .forecast-grid {
+        .forecast-card {
+            flex: 1 1 40%;
+            min-width: 120px;
+        }
+    }
+    
+    .current-weather .temp-main {
+        font-size: 3rem;
+    }
+}
