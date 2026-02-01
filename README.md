@@ -24,7 +24,7 @@ A responsive weather forecasting web application built for the IBM JavaScript Ap
 
 ### 1. Clone the repository
 ```bash
-git clone <your-github-repo-url>
+git clone https://github.com/whtt1/ibm-weather-task.git
 cd vite-project
 ```
 
